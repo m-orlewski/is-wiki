@@ -1,0 +1,7 @@
+20220501	10:48:18	b20917a7-2235-4fdb-96c7-8b695785b12e	GET	http://localhost:3000	/employees
+20220501	10:56:21	3290b0de-d866-4f2f-aadd-720a23edc53d	OPTIONS	http://localhost:3000	/auth
+20220501	10:56:21	dbfb7055-c68f-48d9-a318-31496b6dc985	POST	http://localhost:3000	/auth
+20220501	10:56:23	d241ca28-76fe-4c8f-8436-a1a3a27efd02	OPTIONS	http://localhost:3000	/employees
+20220501	10:56:23	656afd99-41e8-4875-9c9c-7a876a918bfa	OPTIONS	http://localhost:3000	/employees
+20220501	10:56:23	33c46230-f1fd-4691-b8b7-458ac78cf3f4	GET	http://localhost:3000	/employees
+20220501	10:56:23	8bc57b8a-5ca4-4bd6-b544-04f6ca87215f	GET	http://localhost:3000	/employees
