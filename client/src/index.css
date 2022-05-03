@@ -72,7 +72,7 @@ body::before {
   margin-right: 2rem;
 }
 .nav-item {
-  display: flex;
+  display: inline-block;
   align-items: center;
   height: 80px;
 }
@@ -102,13 +102,13 @@ body::before {
     height: 150%;
     position: absolute;
     top: 20vh;
-    left: -100%;
+    left: -150%;
     opacity: 1;
     justify-content: center;
     transition: all 0.5s ease;
   }
   .nav-menu.active {
-    background: #f2eded;
+    background: #ffffff;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -120,7 +120,7 @@ body::before {
     display: table;
   }
   .nav-links:hover {
-    background-color: #1888ff;
+    background-color: #f1356d;
     border-radius: 0;
   }
   .menu-icon {

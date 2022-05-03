@@ -22,5 +22,15 @@ export const GlobalStyles = createGlobalStyle`
   input {
     color:  #333;
   }
+  .nav-links:hover {
+    color: ${(props) => props.theme.body};
+  }
+  .dropdown-link:hover {
+    color: ${(props) => props.theme.body};
+  }
+  .nav-menu.active {
+    background: ${(props) => props.theme.body};
+  }
+  
 
 `;
