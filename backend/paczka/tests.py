@@ -1,4 +1,5 @@
 from django.test import TestCase
+<<<<<<< HEAD
 import datetime
 from paczka.models import *
 
@@ -148,3 +149,7 @@ at 2022-10-23: {leader.descripton}'
         self.assertEqual(leader.get_path_to_file(),'/tmp')
 
 
+=======
+
+# Create your tests here.
+>>>>>>> 9bced80 (add Lecturer and Review models)
