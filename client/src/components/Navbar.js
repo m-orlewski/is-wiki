@@ -129,6 +129,11 @@ const Navbar = () => {
           :
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
               <li className='nav-item'>
+                <Link to='/base' className='nav-links' onClick={closeMobileMenu}>
+                  <FontAwesomeIcon icon={faTimes}/> Base
+                </Link>
+              </li>
+              <li className='nav-item'>
                 <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                   <FontAwesomeIcon icon={faHouseUser}/> Home
                 </Link>

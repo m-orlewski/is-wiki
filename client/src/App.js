@@ -1,5 +1,6 @@
 import Register from './components/Register';
 import Login from './components/Login';
+import Base from './components/Base';
 import Home from './components/Home';
 import Layout from './components/Layout';
 import Materials from './components/Materials';
@@ -26,6 +27,7 @@ function App() {
 
       <Route path="/" element={<Layout />}>
         {/* public routes */}
+        <Route path="base" element={<Base />} />
         <Route path="/" element={<Home />} />
         <Route path="help" element={<Help />} />
         <Route path="login" element={<Login />} />
