@@ -264,6 +264,33 @@ body::before {
   display: inline-block;
 }
 /* 
+--------------------Base--------------------
+*/
+.base h1 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.base h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.base img {
+  width: 100%;
+  object-fit: cover;
+}
+.base button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+/* 
 --------------------Login--------------------
 */
 .login {
