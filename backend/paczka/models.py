@@ -64,4 +64,4 @@ class Material(models.Model):
             ' at ' + self.upload_date + ': ' + self.descripton
 
     def get_path_to_file(self):
-        return self.path         
+        return self.path_to_file         
