@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* 
+--------------------General--------------------
+*/
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+body {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+body::before {    
+  content: "";
+  width:100%;
+  height:100%;
+  background-image: url('./images/logo.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 75% 75%;
+  background-position: center bottom;
+  background-attachment:fixed; 
+  position:fixed;
+  pointer-events: none;
+  top: 0px;
+  right: 0px;
+  bottom: 0%;
+  left: 0px;
+  opacity: 0.04;
+}
+.content {
+  max-width: 75%;
+  min-height: 100vh;
+  margin: auto;
+  margin-top: 50px;
+  justify-content: center;
+}
+/* 
+--------------------Navbar--------------------
+*/
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 20px;
+  height: 15vh;
+  display: flex;
+  width: 90%;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 2px solid #f2f2f2bf;
+}
+.navbar-logo {
+  justify-self: start;
+  text-decoration: none;
+  width: 250px;
+}
+.navbar img{
+  margin-right: 10px;
+}
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+.nav-item {
+  display: inline-block;
+  align-items: center;
+  height: 80px;
+}
+.nav-links {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+.nav-links:hover {
+  background-color:#f1356d;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.nav-links-mobile {
+  display: none;
+}
+.menu-icon {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    top: 20vh;
+    left: -150%;
+    opacity: 1;
+    justify-content: center;
+    transition: all 0.5s ease;
+  }
+  .nav-menu.active {
+    background: #ffffff;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-links {
+    text-align: center;
+    width: 100%;
+    display: table;
+  }
+  .nav-links:hover {
+    background-color: #f1356d;
+    border-radius: 0;
+  }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 4px;
+    background: #1888ff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #1888ff;
+    transition: 250ms;
+  }
+}
+/* 
+--------------------Dropdown--------------------
+*/
+.dropdown-menu {
+  width: 200px;
+  position: absolute;
+  top: 105px;
+  list-style: none;
+  text-align: start;
+}
+.dropdown-menu li {
+  background:  #f1356d;
+  cursor: pointer;
+  margin-left: -50px;
+  text-decoration: none;
+}
+.dropdown-menu li:hover {
+  background-color: #f1356d;
+}
+.dropdown-menu.clicked {
+  display: none;
+}
+.dropdown-link {
+  display: block;
+  text-decoration: none;
+  padding: 16px;
+}
+.dropdown-link:hover {
+  color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 960px) {
+  .fa-caret-down {
+    display: none;
+  }
+}
+
+/* 
+--------------------Register--------------------
+*/
+.register {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.register label {
+  text-align: left;
+  display: block;
+  font-weight: 500;
+}
+.register h1 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.register input, .register textarea, .register select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.register button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: rgb(205, 109, 109);
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+  margin-bottom:15px;
+}
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+.hide {
+  display: none;
+}
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.line {
+  display: inline-block;
+}
+/* 
+--------------------Base--------------------
+*/
+.base h1 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.base h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.base img {
+  width: 100%;
+  object-fit: cover;
+}
+.base button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+/* 
+--------------------Login--------------------
+*/
+.login {
+  max-width: 500px;
+  margin: 100px auto;
+  text-align: center;
+}
+.login label {
+  text-align: left;
+  display: block;
+  font-weight: 500;
+}
+.login h1 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.login input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.login button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* 
+--------------------Footer--------------------
+*/
+footer
+{
+  margin-top: 50px;
+  padding: 30px 0;
+  text-align: center;
+  background: #9ea0a2;
+}
