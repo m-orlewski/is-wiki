@@ -4,6 +4,7 @@ import Base from './components/Base';
 import Home from './components/Home';
 import Layout from './components/Layout';
 import Materials from './components/Materials';
+import Opinion from './components/Opinion';
 import Admin from './components/Admin';
 import Missing from './components/Missing';
 import Unauthorized from './components/Unauthorized';
@@ -33,6 +34,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="unauthorized" element={<Unauthorized />} />
+        <Route path="opinion" element={<Opinion />} />
 
         <Route element={<RequireAuth allowedRoles={[ROLES.Editor]} />}>
           <Route path="materials" element={<Materials />} />
@@ -49,6 +51,10 @@ function App() {
 
         <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />}>
           <Route path="profil" element={<Profil />} />
+        </Route>
+
+        <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin, ROLES.User]} />}>
+          <Route path="opinion" element={<Opinion />} />
         </Route>
 
         {/* catch all */}

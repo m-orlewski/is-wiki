@@ -5,7 +5,7 @@ import useAuth from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../context/AuthProvider";
-import { faPerson,faTimes,faBars,faCaretDown,faHouseUser,faArrowRightToBracket,faRegistered,faMoon,faSun,faArrowRightFromBracket} from "@fortawesome/free-solid-svg-icons";
+import { faPerson,faTimes,faBars,faCaretDown,faHouseUser,faArrowRightToBracket,faRegistered,faMoon,faSun,faArrowRightFromBracket, faThumbsUp} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from 'react';
 import Dropdown from './Dropdown';
@@ -131,6 +131,9 @@ const Navbar = () => {
               <li className='nav-item'>
                 <Link to='/base' className='nav-links' onClick={closeMobileMenu}>
                   <FontAwesomeIcon icon={faTimes}/> Base
+                </Link>
+                <Link to='/Opinion' className='nav-links' onClick={closeMobileMenu}>
+                  <FontAwesomeIcon icon={faThumbsUp}/> Opinion
                 </Link>
               </li>
               <li className='nav-item'>
