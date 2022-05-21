@@ -11,7 +11,6 @@ class Lecturer(models.Model):
     def __str__(self):
         return self.name + " " + self.surname
 
-
 class Course(models.Model):
     course_name = models.CharField(max_length=80)
     description = models.TextField()
@@ -49,7 +48,6 @@ class Review(models.Model):
         return 'Review by ' + self.author_name + ' ' + self.author_surname + '(' + self.author_email + ')' +\
                ' about ' + about.__str__() + ' with score ' + str(self.score) + ': ' + self.description
 
-
 class Material(models.Model):
     author_name = models.CharField(max_length=80)
     author_surname = models.CharField(max_length=80)
@@ -65,4 +63,4 @@ class Material(models.Model):
             ' at ' + str(self.upload_date) + ': ' + self.descripton
 
     def get_path_to_file(self):
-        return self.path_to_file         
+        return self.path_to_file    
