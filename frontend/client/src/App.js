@@ -14,6 +14,7 @@ import Subject from './components/Subject';
 import Help from './components/Help';
 import Profil from './components/Profil';
 import RequireAuth from './components/RequireAuth';
+import PersistLogin from './components/PersistLogin';
 import { Routes, Route } from 'react-router-dom';
 
 const ROLES = {
@@ -30,6 +31,7 @@ function App() {
 
       <Route path="/" element={<Layout />}>
         {/* public routes */}
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<Home />} />
         <Route path="base" element={<Base />} />
         <Route path="help" element={<Help />} />
@@ -38,35 +40,38 @@ function App() {
         <Route path="unauthorized" element={<Unauthorized />} />
         <Route path="opinion" element={<Opinion />} />
 
-        <Route element={<RequireAuth allowedRoles={[ROLES.Editor]} />}>
-          <Route path="materials" element={<Materials />} />
+
+        <Route element={<PersistLogin />}>
+        
+          <Route element={<RequireAuth allowedRoles={[ROLES.Editor]} />}>
+            <Route path="materials" element={<Materials />} />
+          </Route>
+
+
+          <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
+            <Route path="admin" element={<Admin />} />
+          </Route>
+
+          <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />}>
+            <Route path="lecturers" element={<Lecturers />} />
+          </Route>
+
+          <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />}>
+            <Route path="lecturer" element={<Lecturer />} />
+          </Route>
+
+          <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin, ROLES.User]} />}>
+            <Route path="opinion" element={<Opinion />} />
+          </Route>
+
+          <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />}>
+            <Route path="subject" element={<Subject />} />
+          </Route>
+
+          <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />}>
+            <Route path="profil" element={<Profil />} />
+          </Route>
         </Route>
-
-
-        <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
-          <Route path="admin" element={<Admin />} />
-        </Route>
-
-        <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />}>
-          <Route path="lecturers" element={<Lecturers />} />
-        </Route>
-
-        <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />}>
-          <Route path="lecturer" element={<Lecturer />} />
-        </Route>
-
-        <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin, ROLES.User]} />}>
-          <Route path="opinion" element={<Opinion />} />
-        </Route>
-
-        <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />}>
-          <Route path="subject" element={<Subject />} />
-        </Route>
-
-        <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />}>
-          <Route path="profil" element={<Profil />} />
-        </Route>
-
         {/* catch all */}
         <Route path="*" element={<Missing />} />
       </Route>

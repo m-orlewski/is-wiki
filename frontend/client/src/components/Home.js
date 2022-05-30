@@ -1,6 +1,8 @@
+import { useContext } from 'react';
 import { useState } from 'react';
 import { FaFacebookF,FaTwitter,FaYoutube,FaGooglePlus } from "react-icons/fa";
 import { MdKeyboardArrowLeft,MdKeyboardArrowRight } from "react-icons/md";
+import AuthContext from '../context/AuthProvider';
 import background1 from "../images/1.svg";
 import background2 from "../images/2.jpg";
 import background3 from "../images/3.jpg";
