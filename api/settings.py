@@ -88,8 +88,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'api.urls'
@@ -165,12 +163,14 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+'''
 # Configure Django App for Heroku.
 django_on_heroku.settings(locals())
 
@@ -187,3 +187,4 @@ DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 # Add these at the very last line of settings.py
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
+'''
