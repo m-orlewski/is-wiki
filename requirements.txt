@@ -17,3 +17,5 @@ simplejson==3.17.6
 sqlparse==0.4.2
 tzdata==2022.1
 whitenoise==6.2.0
+sphinx
+sphinx-rtd-theme
