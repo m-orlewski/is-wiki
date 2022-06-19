@@ -9,7 +9,7 @@ IS-WIKI jest platformą służącą do gromadzenia i dzielenia się materiałami
 
 .. toctree::
    :maxdepth: 4
-   :caption: Contents:
+   :caption: Zawartość:
 
    user_docs
    user_guide
@@ -18,8 +18,8 @@ IS-WIKI jest platformą służącą do gromadzenia i dzielenia się materiałami
    contributors
    license
 
-Indices and tables
-==================
+Indeksy i tabele
+================
 
 * :ref:`genindex`
 * :ref:`modindex`
