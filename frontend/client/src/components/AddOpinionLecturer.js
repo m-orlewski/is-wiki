@@ -35,7 +35,6 @@ const AddOpinionLecturer = () =>
                     lecturer: id,
                 })
                 .then((res) => {
-                   // console.log(score);
                     setSentFlag(1);
                 });           
             } catch (err) {

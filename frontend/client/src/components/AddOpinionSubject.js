@@ -35,7 +35,6 @@ const AddOpinionSubject = () =>
                     course: id,
                 })
                 .then((res) => {
-                   // console.log(score);
                     setSentFlag(1);
                 });           
             } catch (err) {

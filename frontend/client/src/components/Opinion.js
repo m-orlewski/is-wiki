@@ -14,10 +14,8 @@ const Opinion = () =>
 
     const OPINION_GET_URL = 'reviews'
 
-    const [comment, setComment] = useState('');
+    const [comment, setComment] = useState([]);
     const navigate = useNavigate();
-    //var [name, setName] = useState('');
-
 
     useEffect(() => 
     {
@@ -46,25 +44,7 @@ const Opinion = () =>
                     }
                 }
                 setComment(JSON.parse(JSON.stringify(arr)));
-            });    
-            /*
-            axiosInstance
-            .get(objectIsLecturer?'lecturers':'courses', {})
-            .then((res) => 
-            {
-                if(objectIsLecturer)
-                {
-                    name = searchParams.get('name');
-                    //name = setName(res.data.filter(l => l.id === id).map(l => (l.name + ' ' + l.surname)));
-                    console.log('eee' + name);
-                }
-                else
-                {
-                    name = searchParams.get('name');
-                    //name = setName(res.data.filter(l => l.id === id).map(l => (l.course_name)));
-                    console.log('eee' + name);
-                }
-            });         */  
+            });
         } catch (err) {}
     }, []);
 

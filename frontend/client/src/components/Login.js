@@ -44,7 +44,6 @@ const Login = () => {
                         email: email,
                     })
                     .then((res) => {
-                        console.log(res.data.first_name);
                         sessionStorage.setItem('first_name', res.data.first_name);
                         sessionStorage.setItem('last_name', res.data.last_name);
                     });           

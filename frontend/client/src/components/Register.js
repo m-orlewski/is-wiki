@@ -95,7 +95,6 @@ const Register = () => {
             
             emailjs.send('service_vgam257', 'template_1wgb8ed',templateParams, 'ZNxfGZ-mDX0Y6JECh')
             .then((result) => {
-                console.log(result.text);
             }, (error) => {
                 alert(error.text);
             });

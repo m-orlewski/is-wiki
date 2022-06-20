@@ -31,7 +31,6 @@ const NavbarComponent = () => {
         const response = axiosInstance.post('user/logout/blacklist/', {
           refresh_token: sessionStorage.getItem('refresh_token'),
         });
-        console.log(response);
         sessionStorage.removeItem('access_token');
         sessionStorage.removeItem('refresh_token');
         axiosInstance.defaults.headers['Authorization'] = null;
